@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photos – Bala’s Nature Scrapbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3ead7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .navbar a {
+      margin: 0 10px;
+      text-decoration: underline;
+      color: #222;
+      font-size: 0.95rem;
+    }
+
+    .navbar a:hover {
+      opacity: 0.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .page-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">About</a>
+    <a href="photos.html"><strong>Photos</strong></a>
+  </nav>
+
+  <div class="container">
+
+    <h1 class="page-title">Photos</h1>
+
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="">
+      <img src="images/photo2.jpg" alt="">
+      <img src="images/photo3.jpg" alt="">
+      <img src="images/photo4.jpg" alt="">
+    </div>
+
+  </div>
+
+  <footer></footer>
+
+</body>
+</html>
