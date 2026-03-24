@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background-color: #f3ead7;
+  color: #222;
+  line-height: 1.7;
+}
+
+.navbar {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.navbar a {
+  margin: 0 10px;
+  text-decoration: underline;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.navbar a:hover {
+  opacity: 0.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  margin-bottom: 12px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
