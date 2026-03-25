@@ -54,12 +54,13 @@ footer {
   color: #888;
 }
 
-/* New gallery styles for photos.html */
+/* Gallery styles for photos.html */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* two per row */
   gap: 20px;
   margin-top: 20px;
+  max-width: 100%; /* ensure gallery does not exceed container */
 }
 
 .gallery figure {
@@ -68,6 +69,7 @@ footer {
 
 .gallery img {
   width: 100%;
+  height: auto; /* maintain aspect ratio */
   display: block;
   transition: transform 0.2s ease;
 }
@@ -77,15 +79,29 @@ footer {
 }
 
 .gallery figcaption {
-  text-align: center;
+  text-align: left; /* left-aligned captions */
+  font-style: italic; /* italic */
   margin-top: 8px;
   font-size: 0.9rem;
   color: #444;
 }
 
-/* Optional: responsive for small screens */
-@media (max-width: 500px) {
+/* Make sure the gallery stays within container on small screens */
+@media (max-width: 600px) {
   .gallery {
-    grid-template-columns: 1fr; /* one image per row on very small screens */
+    grid-template-columns: 1fr 1fr; /* two per row on phone */
+    gap: 12px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra small phones - one per row if necessary */
+@media (max-width: 350px) {
+  .gallery {
+    grid-template-columns: 1fr; /* one per row */
   }
 }
