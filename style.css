@@ -9,6 +9,8 @@ body {
 .navbar {
   padding: 15px 20px;
   text-align: center;
+  position: relative;
+  top: 13px; /* adjust this value */
 }
 
 .navbar a {
@@ -81,10 +83,6 @@ footer {
   transition: transform 0.2s ease;
 }
 
-.gallery img:hover {
-  transform: scale(1.03);
-}
-
 .gallery figcaption {
   text-align: left;
   font-style: italic;
@@ -152,5 +150,21 @@ footer {
 @media (max-width: 350px) {
   .gallery {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.6rem;
+  }
+}
+
+.desktop-break {
+  display: inline;
+}
+
+@media (max-width: 600px) {
+  .desktop-break {
+    display: none;
   }
 }
