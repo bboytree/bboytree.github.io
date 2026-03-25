@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Lora, serif;
+  font-family: 'Lora', serif;
   background-color: #f3ead7;
   color: #222;
   line-height: 1.6;
@@ -52,4 +52,40 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   color: #888;
+}
+
+/* New gallery styles for photos.html */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.gallery figcaption {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Optional: responsive for small screens */
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr; /* one image per row on very small screens */
+  }
 }
