@@ -3,7 +3,7 @@ body {
   font-family: 'Lora', serif;
   background-color: #f3ead7;
   color: #222;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .navbar {
@@ -64,6 +64,10 @@ footer {
    Gallery (photos.html)
    ========================= */
 
+.photosintro {
+  font-size: 0.5rem;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -87,7 +91,7 @@ footer {
   text-align: left;
   font-style: italic;
   margin-top: 8px;
-  font-size: 0.9rem;
+  font-size: 0.925rem;
   color: #444;
 }
 
@@ -112,7 +116,7 @@ footer {
 .notes {
   text-align: left;
   position: relative;
-  font-size: 0.93rem;
+  font-size: 0.94rem;
   top: 12px;
 }
 
