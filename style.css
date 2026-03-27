@@ -111,8 +111,8 @@ footer {
 
 .notes {
   text-align: left;
-  /* color: #555; */
   position: relative;
+  font-size: 0.93rem;
   top: 12px;
 }
 
@@ -120,8 +120,7 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
-  font-size: 0.85rem;
-  /* color: #555; */
+  font-size: 0.97rem;
 }
 
 .location {
