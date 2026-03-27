@@ -65,7 +65,7 @@ footer {
    ========================= */
 
 .photosintro {
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 
 .gallery {
@@ -91,7 +91,7 @@ footer {
   text-align: left;
   font-style: italic;
   margin-top: 8px;
-  font-size: 0.925rem;
+  font-size: 0.97rem;
   color: #444;
 }
 
@@ -116,7 +116,7 @@ footer {
 .notes {
   text-align: left;
   position: relative;
-  font-size: 0.94rem;
+  font-size: 0.95rem;
   top: 12px;
 }
 
