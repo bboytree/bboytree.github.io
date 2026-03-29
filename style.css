@@ -82,9 +82,9 @@ footer {
 
 .gallery img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover; 
   display: block;
-  transition: transform 0.2s ease;
 }
 
 .gallery figcaption {
@@ -116,7 +116,7 @@ footer {
 .notes {
   text-align: left;
   position: relative;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   top: 12px;
 }
 
