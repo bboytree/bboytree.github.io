@@ -86,6 +86,7 @@ footer {
   aspect-ratio: 3 / 2;
   object-fit: cover; 
   display: block;
+  background-color: #eae0c8;
 }
 
 .gallery figcaption {
@@ -153,7 +154,7 @@ footer {
 
   .gallery img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 3 / 2;
   }
 }
 
