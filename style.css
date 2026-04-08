@@ -52,7 +52,9 @@ body {
 .page-title {
   font-size: 2rem;
   margin-bottom: 10px;
+  font-weight: 600;
 }
+
 
 .intro p {
   margin-bottom: 12px;
