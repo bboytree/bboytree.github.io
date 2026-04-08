@@ -158,6 +158,10 @@ footer {
   font-weight: 500; /* tweak this */
 }
 
+.ethernal-notes {
+  font-weight: 600;
+}
+
 table {
   width: auto;
   border-collapse: collapse;
