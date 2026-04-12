@@ -13,7 +13,7 @@ a {
 }
 
 .gallery img {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
 .gallery a:hover figcaption {
@@ -110,12 +110,19 @@ footer {
   margin: 0;
 }
 
+.gallery img.loaded {
+  opacity: 1;
+}
+
 .gallery img {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover; 
   display: block;
   background-color: #eae0c8;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .gallery figcaption {

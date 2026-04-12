@@ -62,5 +62,15 @@
   </div><!-- .container -->
 
 
+  <script>
+  document.querySelectorAll('.gallery img').forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.onload = () => img.classList.add('loaded');
+    }
+  });
+</script>
+
 </body>
 </html>
