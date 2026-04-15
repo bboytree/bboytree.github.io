@@ -267,8 +267,8 @@ td {
 @media (max-width: 600px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
-    column-gap: 12px;  /* 👈 keep horizontal the same */
-    row-gap: 19px;     /* 👈 increase vertical spacing */
+    column-gap: 12px;
+    row-gap: 16px;
   }
 
   .gallery img {
