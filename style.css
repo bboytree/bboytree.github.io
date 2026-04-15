@@ -183,14 +183,12 @@ footer {
   display: flex;
   justify-content: space-between;
   /* margin-top: 8px; */
-  font-size: 0.97rem;
-
   display: flex;
   justify-content: space-between;
   margin-top: 0;
   padding: 8px 7px;
 
-  font-size: 0.97rem;
+  font-size: 0.96rem;
   background-color: #f7f1e6;
 }
 
@@ -219,6 +217,7 @@ footer {
 .day {
   color: #e17be8;
   font-weight: 500; /* tweak this */
+  font-size: 0.97em;
 }
 
 .ethernal-notes {
