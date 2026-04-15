@@ -31,37 +31,37 @@
     </div>
 
     <div class="gallery">
-      <figure>
-        <a href="photos/post_lunch2.html">
-          <img src="photos/post_lunch2.JPG" alt="Post-lunch Wind-down photo">
-          <figcaption>Post-lunch</figcaption>
-        </a>
-      </figure>
-
-      <figure>
+            <figure>
         <a href="photos/post_lunch.html">
-          <img src="photos/post_lunch.JPG" alt="Post-lunch Wind-down photo">
-          <figcaption>Post-lunch</figcaption>
+          <img src="photos/post_lunch.JPG" alt="Photo 3">
+          <figcaption>Ethernal</figcaption>
         </a>
       </figure>
 
-      <figure>
-        <a href="photos/ethernal.html">
-          <img src="photos/ethernal.JPG" alt="Ethernal photo">
+            <figure>
+        <a href="photos/post_lunch2.html">
+          <img src="photos/post_lunch2.JPG" alt="Photo 3">
           <figcaption>Ethernal</figcaption>
         </a>
       </figure>
 
       <figure>
-        <a href="photos/land_of_the_rising_sun.html">
-          <img src="photos/land_of_the_rising_sun.JPG" alt="Land of the Rising Sun photo">
-          <figcaption>Land of the Rising Sun</figcaption>
+        <a href="photos/ethernal.html">
+          <img src="photos/ethernal.JPG" alt="Photo 3">
+          <figcaption>Ethernal</figcaption>
+        </a>
+      </figure>
+
+      <figure>
+        <a href="photos/rising_sun.html">
+          <img src="photos/rising_sun.JPG" alt="Photo 3">
+          <figcaption>Rising Sun</figcaption>
         </a>
       </figure>
 
       <figure>
         <a href="photos/lines_and_shapes.html">
-          <img src="photos/lines_and_shapes.jpg" alt="Lines and Shapes photo">
+          <img src="photos/lines_and_shapes.jpg" alt="Photo 2">
           <figcaption>Lines and Shapes</figcaption>
         </a>
       </figure>
@@ -75,6 +75,16 @@
     </div> <!-- .gallery -->
   </div><!-- .container -->
 
+
+  <script>
+  document.querySelectorAll('.gallery img').forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.onload = () => img.classList.add('loaded');
+    }
+  });
+</script>
 
 </body>
 </html>
