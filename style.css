@@ -261,6 +261,85 @@ td {
 }
 
 /* =========================
+   Mailling L
+   ========================= */
+
+.newsletter {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(34, 34, 34, 0.15);
+}
+
+.newsletter-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* layout */
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+/* input */
+.newsletter-form input {
+  flex: 1;
+  padding: 10px 12px;
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+
+  border: 1px solid rgba(34, 34, 34, 0.2);
+  background-color: #f7f1e6;
+  outline: none;
+}
+
+/* button */
+.newsletter-form button {
+  padding: 10px 14px;
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+
+  border: 1px solid rgba(34, 34, 34, 0.2);
+  background-color: #f7f1e6;
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  opacity: 0.7;
+}
+
+/* messages */
+.newsletter-success,
+.newsletter-error {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.newsletter-success {
+  color: #2f7d32;
+}
+
+.newsletter-error {
+  color: #b00020;
+}
+
+/* mobile stacking */
+@media (max-width: 600px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+
+/* =========================
    Responsive
    ========================= */
 
