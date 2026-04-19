@@ -265,14 +265,27 @@ td {
    ========================= */
 
 .newsletter {
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(34, 34, 34, 0.15);
+  margin-top: 35px;
+  padding-top: 20px;
+  position: relative;
+}
+
+/* custom shorter line */
+.newsletter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 4px;   /* 👈 adjust this */
+  right: 4px;  /* 👈 adjust this */
+  height: 1px;
+  background-color: rgba(34, 34, 34, 0.15);
 }
 
 .newsletter-title {
-  font-size: 1.1rem;
-  font-weight: 600;
+  margin-top: 2px;   /* 👈 reduce this */
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 12px;
 }
 
