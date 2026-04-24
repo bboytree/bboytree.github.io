@@ -167,6 +167,52 @@ footer {
   text-align: right;
 }
 
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  margin-top: 30px;
+  font-size: 0.96rem;
+}
+
+.page-left {
+  text-align: left;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+}
+
+/* .page-center {
+  text-align: center;
+  letter-spacing: 0.08em;
+} */
+
+.page-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.08em;
+}
+
+.page-right {
+  text-align: right;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+}
+
+/* Match navbar underline exactly */
+.pagination a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  position: relative;
+  top: -0.6px;
+}
+
+.pagination a:hover {
+  opacity: 0.6;
+}
+
 /* =========================
    Photo detail page
    ========================= */

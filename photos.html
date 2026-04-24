@@ -30,80 +30,86 @@
       </p>
     </div>
 
-    <div class="gallery">
+<div class="gallery" id="gallery"></div>
 
-      <figure>
-        <a href="photos/post_lunch.html">
-          <img src="photos/post_lunch.JPG" alt="Photo 3">
-          <figcaption>Post-lunch</figcaption>
-        </a>
-      </figure>      
-
-      <figure>
-        <a href="photos/ethernal.html">
-          <img src="photos/ethernal.JPG" alt="Photo 3">
-          <figcaption>Ethernal</figcaption>
-        </a>
-      </figure>
-
-      <figure>
-        <a href="photos/rising_sun.html">
-          <img src="photos/rising_sun.JPG" alt="Photo 3">
-          <figcaption>Rising Sun</figcaption>
-        </a>
-      </figure>
-
-      <figure>
-        <a href="photos/lines_and_shapes.html">
-          <img src="photos/lines_and_shapes.jpg" alt="Photo 2">
-          <figcaption>Lines and Shapes</figcaption>
-        </a>
-      </figure>
-
-      <figure>
-        <a href="photos/goodnight.html">
-          <img src="photos/goodnight.JPG" alt="Goodnight photo">
-          <figcaption>Goodnight</figcaption>
-        </a>
-      </figure>
-    </div> <!-- .gallery -->
-
-  <div class="newsletter">
-  <h2 class="newsletter-title">New scrapbook entries</h2>
-
-  <form id="newsletter-form" class="newsletter-form">
-    
-    <input 
-      type="email" 
-      name="email" 
-      placeholder="Enter your email"
-      required
-    />
-
-    <button type="submit">
-      Join mailing list
-    </button>
-  </form>
-
-  <p id="success-message" class="newsletter-success">
-    You’ve joined the mailing list 🎉
-  </p>
-
-  <p id="error-message" class="newsletter-error">
-    Something went wrong. Please try again.
-  </p>
-</div>  
+<div class="pagination" id="pagination"></div>
   </div><!-- .container -->
 
 
-  <script>
-  document.querySelectorAll('.gallery img').forEach(img => {
-    if (img.complete) {
-      img.classList.add('loaded');
-    } else {
-      img.onload = () => img.classList.add('loaded');
-    }
-  });
+<script>
+const photos = [
+  { src: "photos/post_lunch.JPG", title: "Post-lunch", link: "photos/post_lunch.html" },
+  { src: "photos/ethernal.JPG", title: "Ethernal", link: "photos/ethernal.html" },
+  { src: "photos/rising_sun.JPG", title: "Rising Sun", link: "photos/rising_sun.html" },
+  { src: "photos/lines_and_shapes.jpg", title: "Lines and Shapes", link: "photos/lines_and_shapes.html" },
+  { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+  { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+  { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+    { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+  { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+  { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+    { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+  { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+  { src: "photos/goodnight.JPG", title: "Goodnight", link: "photos/goodnight.html" },
+
+  // 👉 Add new photos here
+];
+
+const perPage = 6;
+
+// Get page from URL
+const params = new URLSearchParams(window.location.search);
+const currentPage = parseInt(params.get("page")) || 1;
+
+const start = (currentPage - 1) * perPage;
+const end = start + perPage;
+
+const pagePhotos = photos.slice(start, end);
+
+const gallery = document.getElementById("gallery");
+
+// Render photos
+pagePhotos.forEach(photo => {
+  const figure = document.createElement("figure");
+
+  figure.innerHTML = `
+    <a href="${photo.link}">
+      <img src="${photo.src}" alt="${photo.title}">
+      <figcaption>${photo.title}</figcaption>
+    </a>
+  `;
+
+  gallery.appendChild(figure);
+});
+
+// Pagination logic
+const totalPages = Math.ceil(photos.length / perPage);
+const pagination = document.getElementById("pagination");
+
+pagination.innerHTML = `
+  <div class="page-left">
+    ${currentPage > 1 ? `<a href="?page=${currentPage - 1}">TURN BACK</a>` : ``}
+  </div>
+
+<div class="page-center">
+  <div class="page-line"></div>
+  <span>PAGE ${currentPage}</span>
+  <div class="page-line"></div>
+</div>
+
+  <div class="page-right">
+    ${currentPage < totalPages ? `<a href="?page=${currentPage + 1}">TURN PAGE</a>` : ``}
+  </div>
+`;
+
+// Fade-in effect (your original logic)
+document.querySelectorAll('.gallery img').forEach(img => {
+  if (img.complete) {
+    img.classList.add('loaded');
+  } else {
+    img.onload = () => img.classList.add('loaded');
+  }
+});
 </script>
 
 </body>
