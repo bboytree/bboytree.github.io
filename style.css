@@ -57,7 +57,7 @@ body {
 
 .intro p {
   margin-bottom: 12px;
-  font-size: 0.97rem;
+  font-size: 0.965rem;
 }
 
 .feature-image {
@@ -86,7 +86,7 @@ footer {
    ========================= */
 
 .photosintro {
-  font-size: 0.97rem;
+  font-size: 0.965rem;
 }
 
 .gallery {
@@ -179,7 +179,7 @@ footer {
 .notes {
   text-align: left;
   position: relative;
-  font-size: 0.97rem;
+  font-size: 0.965rem;
   top: 12px;
 }
 
