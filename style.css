@@ -368,6 +368,10 @@ td {
     width: 100%;
     aspect-ratio: 3 / 2;
   }
+
+  .photo-pagination {
+    --pagination-line-thickness: 0.92px;
+  }
 }
 
 /* Very narrow screens switch to a single photo column. */
