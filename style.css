@@ -1,21 +1,26 @@
+/* Smooths jumps when linking to an anchor on the same page. */
 html {
   scroll-behavior: smooth;
 }
 
+/* Keep links looking like the surrounding text unless a section adds its own styling. */
 a {
   color: inherit;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
+/* Gallery images fade in once the page script adds the .loaded class. */
 .gallery img {
   transition: opacity 0.4s ease;
 }
 
+/* Soft hover feedback on photo titles in the gallery. */
 .gallery a:hover figcaption {
   opacity: 0.6;
 }
 
+/* Site-wide page defaults: typeface, paper colour, text colour, and readable line height. */
 body {
   margin: 0;
   font-family: 'Lora', serif;
@@ -24,55 +29,66 @@ body {
   line-height: 1.7;
 }
 
+/* Individual links inside the top navigation. */
 .navbar a {
   margin: 0 10px;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   font-size: 1rem;
 }
 
+/* Top navigation bar shared by the about, gallery, and photo detail pages. */
 .navbar {
   padding: 15px 20px;
   text-align: center;
   position: relative;
-  top: 13px; /* adjust this value */
+  top: 13px; /* Nudges the nav slightly down from the top edge. */
 }
 
 .navbar a:hover {
   opacity: 0.6;
 }
 
+/* Main content column. The custom property controls vertical gallery spacing below. */
 .container {
+  --gallery-row-gap: 29px;
+
   max-width: 800px;
   margin: auto;
-  padding: 20px 20px 60px; /* 👈 increase bottom padding */
+  padding: 20px 20px 60px; /* Extra bottom padding keeps the final content from feeling cramped. */
 }
 
+/* Main heading on each page. */
 .page-title {
   font-size: 2rem;
   margin-bottom: 10px;
   font-weight: 600;
 }
 
-
+/* Introductory text blocks on the about and photos pages. */
 .intro p {
   margin-bottom: 12px;
   font-size: 0.965rem;
 }
 
+/* Wrapper for large standalone images on the about and detail pages. */
 .feature-image {
   margin: 30px 0 0;
 }
 
+/* Makes feature images scale to the available content width. */
 .feature-image img {
   width: 100%;
   display: block;
 }
 
+/* The about page uses a smaller feature image than the photo detail pages. */
 .about .feature-image img {
   width: 60%;
 }
 
+/* Optional footer styling, ready for pages that include a footer. */
 footer {
   text-align: center;
   margin-top: 50px;
@@ -85,39 +101,44 @@ footer {
    Gallery (photos.html)
    ========================= */
 
+/* Short intro sentence above the gallery grid. */
 .photosintro {
   font-size: 0.965rem;
 }
 
+/* Two-column photo grid. The row gap comes from --gallery-row-gap on .container. */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* gap: 20px; */
 
-  column-gap: 20px;  /* 👈 keep horizontal the same */
-  row-gap: 29px;     /* 👈 increase vertical spacing */
+  column-gap: 20px;
+  row-gap: var(--gallery-row-gap);
 
   margin-top: 20px;
   max-width: 100%;
 }
 
+/* Each gallery item is a figure containing an image and caption strip. */
 .gallery figure {
   margin: 0;
   background-color: #f7f1e6;
   padding: 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   /* padding: 0px 0px 8px; */
   /* border: 1px solid rgba(34, 34, 34, 0.1); */
 }
 
+/* Applied by the small gallery script once an image has loaded. */
 .gallery img.loaded {
   opacity: 1;
 }
 
+/* Fixed-ratio thumbnails; object-fit crops photos neatly into matching tiles. */
 .gallery img {
   width: 100%;
   aspect-ratio: 3 / 2;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
   background-color: #eae0c8;
 
@@ -125,6 +146,7 @@ footer {
   transition: opacity 0.4s ease;
 }
 
+/* Caption strip beneath each gallery thumbnail. */
 .gallery figcaption {
   text-align: left;
   font-style: italic;
@@ -148,17 +170,20 @@ footer {
   color: #444;
 }
 
+/* Keeps the hover fade on captions separate from the image fade-in. */
 .gallery figcaption {
   transition: opacity 0.2s ease;
   /* text-decoration: underline; */
   /* text-underline-offset: 3px; */
 }
 
+/* Shared place for optional shadows on caption-style strips. Currently disabled. */
 .image-meta,
 .gallery figcaption {
   /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); */
 }
 
+/* Utility classes for captions or metadata that need explicit left/right alignment. */
 .caption-left {
   text-align: left;
 }
@@ -167,15 +192,65 @@ footer {
   text-align: right;
 }
 
+/* Pagination bar beneath the gallery pages. */
+.photo-pagination {
+  --pagination-line-thickness: 1px;
+
+  margin-top: 20px;
+  border-top: var(--pagination-line-thickness) solid currentColor;
+  border-bottom: var(--pagination-line-thickness) solid currentColor;
+  color: #444;
+  font-size: 0.96rem;
+  line-height: 1;
+}
+
+/* Three-part row: previous link, current page label, next link. */
+.photo-pagination__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  min-height: 29px;
+  text-transform: uppercase;
+}
+
+/* Centers the current page label between the two link columns. */
+.photo-pagination__current {
+  justify-self: center;
+  text-align: center;
+}
+
+/* Pagination links inherit the bar style but center their own text. */
+.photo-pagination a {
+  text-align: center;
+}
+
+/* Left-side pagination link. */
+.photo-pagination__previous {
+  justify-self: start;
+  padding-left: 2px;
+}
+
+/* Right-side pagination link. */
+.photo-pagination__next {
+  justify-self: end;
+  padding-right: 2px;
+}
+
+.photo-pagination a:hover {
+  opacity: 0.6;
+}
+
 /* =========================
    Photo detail page
    ========================= */
 
+/* Container for the notes area below a full-size photo. */
 .photo-details {
   margin-top: 20px;
   padding: 0 2px;
 }
 
+/* Body text for photo notes. The small top offset moves notes away from the image metadata. */
 .notes {
   text-align: left;
   position: relative;
@@ -183,6 +258,7 @@ footer {
   top: 12px;
 }
 
+/* Location/date strip shown directly under a photo on detail pages. */
 .image-meta {
   display: flex;
   justify-content: space-between;
@@ -196,16 +272,19 @@ footer {
   background-color: #f7f1e6;
 }
 
+/* Adds a subtle frame around full-size photo figures. */
 .feature-image figure {
   margin: 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* Hanging indent for note lines that begin with an asterisk. */
 .note-item {
   padding-left: 12px;
   text-indent: -12px;
 }
 
+/* Left and right sides of the image metadata strip. */
 .location {
   text-align: left;
 }
@@ -214,20 +293,24 @@ footer {
   text-align: right;
 }
 
+/* Slightly reduces the year so dates have a softer visual hierarchy. */
 .year {
   font-size: 0.96em;
 }
 
+/* Highlights the day number when a detail page includes one. */
 .day {
   color: #e17be8;
-  font-weight: 500; /* tweak this */
+  font-weight: 500;
   font-size: 0.97em;
 }
 
+/* Special-case weight for the Ethernal notes heading. */
 .ethernal-notes {
   font-weight: 600;
 }
 
+/* Basic table styling for note pages that include structured facts. */
 table {
   width: auto;
   border-collapse: collapse;
@@ -235,25 +318,28 @@ table {
   font-size: 0.96rem;
 }
 
+/* Default spacing inside table cells. */
 td {
   padding: 2px 8px;
 }
 
+/* Optional table style with a border around the outside and lines inside. */
 .table-inner-lines {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-collapse: collapse;
 }
 
+/* Tighter cell padding for bordered note tables. */
 .table-inner-lines td {
   padding: 4px 12px 4px 6px;
 }
 
-/* Horizontal lines */
+/* Horizontal lines between table rows. */
 .table-inner-lines tr:not(:last-child) td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-/* Vertical divider */
+/* Vertical divider after the first column. */
 .table-inner-lines td:first-child {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   padding-right: 16px;
@@ -264,11 +350,16 @@ td {
    Responsive
    ========================= */
 
+/* Phone layout: keep two columns, but tighten the gallery spacing. */
 @media (max-width: 600px) {
+  .container {
+    --gallery-row-gap: 19px;
+  }
+
   .gallery {
     grid-template-columns: 1fr 1fr;
     column-gap: 12px;
-    row-gap: 20px;
+    row-gap: var(--gallery-row-gap);
   }
 
   .gallery img {
@@ -277,18 +368,21 @@ td {
   }
 }
 
+/* Very narrow screens switch to a single photo column. */
 @media (max-width: 350px) {
   .gallery {
     grid-template-columns: 1fr;
   }
 }
 
+/* Smaller title size on phone-width screens. */
 @media (max-width: 600px) {
   .page-title {
     font-size: 1.6rem;
   }
 }
 
+/* Line break that appears on desktop but disappears on smaller screens. */
 .desktop-break {
   display: inline;
 }
