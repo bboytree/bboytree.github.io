@@ -119,6 +119,13 @@ footer {
   max-width: 100%;
 }
 
+.gallery-top-lines {
+  border-top: 1px solid currentColor;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
 /* Each gallery item is a figure containing an image and caption strip. */
 .gallery figure {
   margin: 0;
@@ -372,6 +379,10 @@ td {
   .photo-pagination {
     --pagination-line-thickness: 0.92px;
   }
+
+.gallery-top-lines {
+  border-top-width: 0.92px;
+}
 }
 
 /* Very narrow screens switch to a single photo column. */
