@@ -247,7 +247,8 @@ footer {
 }
 
 .photo-pagination a:hover {
-  opacity: 0.6;
+  color: rgba(68, 68, 68, 0.6);
+  opacity: 1;
 }
 
 /* =========================
