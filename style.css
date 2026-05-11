@@ -121,8 +121,8 @@ footer {
 
 .gallery-top-lines {
   border-top: 1px solid currentColor;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 29px;
+  margin-bottom: 21px;
   color: #444;
 }
 
@@ -203,7 +203,7 @@ footer {
 .photo-pagination {
   --pagination-line-thickness: 1px;
 
-  margin-top: 20px;
+  margin-top: 21px;
   border-top: var(--pagination-line-thickness) solid currentColor;
   border-bottom: var(--pagination-line-thickness) solid currentColor;
   color: #444;
