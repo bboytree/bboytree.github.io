@@ -36,7 +36,7 @@ body {
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   font-size: 1rem;
-  text-decoration-color: rgba(68, 68, 68, 0.73);
+  text-decoration-color: rgba(68, 68, 68, 0.74);
 }
 
 /* Top navigation bar shared by the about, gallery, and photo detail pages. */
@@ -124,7 +124,7 @@ footer {
   border-top: 1px solid currentColor;
   margin-top: 29px;
   margin-bottom: 21px;
-  color: rgba(68, 68, 68, 0.73);
+  color: rgba(68, 68, 68, 0.74);
 }
 
 /* Each gallery item is a figure containing an image and caption strip. */
