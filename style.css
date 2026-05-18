@@ -208,7 +208,7 @@ footer {
   border-top: var(--pagination-line-thickness) solid currentColor;
   border-bottom: var(--pagination-line-thickness) solid currentColor;
   color: rgba(68, 68, 68, 0.73);
-  font-size: 0.81rem;
+  font-size: 0.76rem;
   line-height: 1;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -351,7 +351,7 @@ td {
 }
 
 /* Vertical divider after the first column. */
-.table-inner-lines td:first-child {
+.table-inner-lines td:not(:last-child) {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   padding-right: 16px;
   white-space: nowrap;
