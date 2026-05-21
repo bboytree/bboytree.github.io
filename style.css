@@ -357,6 +357,19 @@ td {
   white-space: nowrap;
 }
 
+.notes-line {
+  border-top: 1px solid currentColor;
+  color: rgba(68, 68, 68, 0.62);
+}
+
+.notes-line-top {
+  margin-bottom: 21px;
+}
+
+.notes-line-bottom {
+  margin-top: 21px;
+}
+
 /* =========================
    Responsive
    ========================= */
