@@ -380,7 +380,7 @@ td {
 }
 
 .mailing-list-section .photosintro {
-  font-size: 16px;
+  font-size: 0.965rem;
   color: rgba(68, 68, 68, 0.9);
 }
 
@@ -454,7 +454,7 @@ td {
 .form-message {
   margin-top: 14px;
 
-  font-size: 16px;;
+  font-size: 0.965rem;;
   color: rgba(68, 68, 68, 0.9);
 
   min-height: 20px;
