@@ -160,7 +160,7 @@ form.addEventListener('submit', async function (event) {
   }
 
   // 2. Loading state
-  message.textContent = "Steady...";
+  message.textContent = "Joining...";
 
   try {
     // 3. Send to Formspree (background request)
@@ -173,14 +173,14 @@ form.addEventListener('submit', async function (event) {
     });
 
     if (response.ok) {
-      message.textContent = "I'll send one email every month, or two, notifying you of new entries. Woo.";
+      message.textContent = "You're in. Woo :-)";
       input.value = "";
     } else {
-      message.textContent = "Something went wrong. Please try again.";
+      message.textContent = "Idk wtf happened. Pls try again :-)";
     }
 
   } catch (error) {
-    message.textContent = "Network error. Please try again.";
+    message.textContent = "Idk wtf happened. Pls try again :-)";
   }
 });
 
