@@ -173,7 +173,6 @@ footer {
   padding: 7px 10px;
   margin-top: 0;
 
-  font-size: 0.96rem;
   font-style: italic;
   color: #444;
 }
@@ -370,6 +369,99 @@ td {
   margin-top: 21px;
 }
 
+
+/* =========================
+   Mailing list
+   ========================= */
+
+.mailing-list-section {
+  margin-top: 55px;
+  text-align: left;
+}
+
+.mailing-list-section .photosintro {
+  font-size: 1rem;
+  color: rgba(68, 68, 68, 0.9);
+}
+
+.mailing-form {
+  margin-top: 14px;
+}
+
+.mailing-form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.mailing-input {
+  width: 55%;
+  max-width: 520px;
+
+
+  padding: 8px 12px;
+
+  font-family: 'Lora', serif;
+  font-size: 16px;
+
+  color: #222;
+  background-color: transparent;
+
+  border: 1px solid rgba(68, 68, 68, 0.5);
+  border-radius: 0;
+
+  outline: none;
+
+  -webkit-appearance: none;
+}
+
+.mailing-input::placeholder {
+  color: rgba(68, 68, 68, 0.9);
+  letter-spacing: 0.02em;
+}
+
+.mailing-input:focus {
+  border-color: rgba(68, 68, 68, 0.8);
+  outline: none;
+  box-shadow: none;
+  color: rgba(68, 68, 68, 0.95);
+}
+
+.mailing-button {
+  padding: 8px 24px;
+
+  font-family: 'Lora', serif;
+  font-size: 0.87rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+
+  color: rgba(68, 68, 68, 0.9);
+  background-color: #f7f1e6;
+
+  border: 1px solid rgba(68, 68, 68, 0.5);
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.mailing-button:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.form-message {
+  margin-top: 14px;
+
+  font-size: 1rem;;
+  color: rgba(68, 68, 68, 0.9);
+
+  min-height: 20px;
+
+  text-align: left;
+}
+
 /* =========================
    Responsive
    ========================= */
@@ -395,9 +487,31 @@ td {
     --pagination-line-thickness: 0.92px;
   }
 
-.gallery-top-lines {
-  border-top-width: 0.92px;
-}
+  .gallery-top-lines {
+    border-top-width: 0.92px;
+  }
+
+  .mailing-form-row {
+  gap: 8px;
+  }
+
+  .mailing-button {
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+
+  .mailing-input {
+  width: 100%;
+  max-width: none;
+  }
+
+  .mailing-list-section .photosintro {
+  text-align: center;
+  }
+
+  .form-message {
+  text-align: center;
+  }
 }
 
 /* Very narrow screens switch to a single photo column. */
