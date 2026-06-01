@@ -105,6 +105,12 @@
     novalidate
   >
 
+    <input
+    type="hidden"
+    name="_next"
+    value="https://www.balanaturescrapbook.com/thanks.html"
+  >
+
     <div class="mailing-form-row">
 
       <input
@@ -146,7 +152,45 @@ const form = document.querySelector('.mailing-form');
 const input = document.querySelector('.mailing-input');
 const message = document.querySelector('.form-message');
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const email = input.value.trim();
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // 1. Validate
+  if (!emailPattern.test(email)) {
+    message.textContent = "That\'s an invalid email address, sweetheart.";
+    return;
+  }
+
+  // 2. Loading state
+  message.textContent = "Steady...";
+
+  try {
+    // 3. Send to Formspree (background request)
+    const response = await fetch(form.action, {
+      method: "POST",
+      headers: {
+        "Accept": "application/json"
+      },
+      body: new FormData(form)
+    });
+
+    if (response.ok) {
+      message.textContent = "I'll send one email every month, or two, notifying you of new entries. Woo.";
+      input.value = "";
+    } else {
+      message.textContent = "Something went wrong. Please try again.";
+    }
+
+  } catch (error) {
+    message.textContent = "Network error. Please try again.";
+  }
+});
+
+/* form.addEventListener('submit', function(event) {
 
   const email = input.value.trim();
 
@@ -164,7 +208,7 @@ form.addEventListener('submit', function(event) {
 
   }
 
-});
+}); */
 
 </script>
 
