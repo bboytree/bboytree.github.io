@@ -145,6 +145,7 @@
 const form = document.querySelector('.mailing-form');
 const input = document.querySelector('.mailing-input');
 const message = document.querySelector('.form-message');
+const button = document.querySelector('.mailing-button');
 
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
@@ -161,6 +162,7 @@ form.addEventListener('submit', async function (event) {
 
   // 2. Loading state
   message.textContent = "Joining...";
+  button.disabled = true;
 
   try {
     // 3. Send to Formspree (background request)
@@ -174,13 +176,16 @@ form.addEventListener('submit', async function (event) {
 
     if (response.ok) {
       message.textContent = "You're in. Woo :-)";
-      input.value = "";
+      form.reset();
+      button.disabled = false;
     } else {
       message.textContent = "Idk wtf happened. Pls try again :-)";
+      button.disabled = false;
     }
 
   } catch (error) {
     message.textContent = "Idk wtf happened. Pls try again :-)";
+    button.disabled = false;
   }
 });
 
