@@ -163,7 +163,6 @@ footer {
   color: #444;
   padding-left: 8px;
 
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -456,6 +455,7 @@ td {
 
 .mailing-button:hover {
   background-color: rgba(255, 255, 255, 0.45);
+  border-color: rgba(34, 34, 34, 0.8);
 }
 
 .form-message {

@@ -56,6 +56,41 @@
         <span aria-hidden="true"></span>
       </div>
     </nav>
+<div class="intro mailing-list-section">
+
+  <p class="photosintro">
+    Occasional mailing list,<span class="mobile-break"><br></span><span class="desktop-space"> </span>enter email address:
+  </p>
+
+  <form
+    class="mailing-form"
+    action="https://formspree.io/f/xlgajdqb"
+    method="POST"
+    novalidate
+  >
+
+    <div class="mailing-form-row">
+
+      <input
+        type="email"
+        name="email"
+        placeholder="..."
+        class="mailing-input"
+        required
+      >
+
+      <button type="submit" class="mailing-button">
+        Join
+      </button>
+
+    </div>
+
+    <p class="form-message"></p>
+
+  </form>
+
+</div>
+
   </div><!-- .container -->
 
 
@@ -67,6 +102,77 @@
       img.onload = () => img.classList.add('loaded');
     }
   });
+</script>
+
+<script>
+
+const form = document.querySelector('.mailing-form');
+const input = document.querySelector('.mailing-input');
+const message = document.querySelector('.form-message');
+const button = document.querySelector('.mailing-button');
+
+form.addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const email = input.value.trim();
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // 1. Validate
+  if (!emailPattern.test(email)) {
+    message.textContent = "That\'s an invalid email address, sweetheart.";
+    return;
+  }
+
+  // 2. Loading state
+  message.textContent = "Joining...";
+  button.disabled = true;
+
+  try {
+    // 3. Send to Formspree (background request)
+    const response = await fetch(form.action, {
+      method: "POST",
+      headers: {
+        "Accept": "application/json"
+      },
+      body: new FormData(form)
+    });
+
+    if (response.ok) {
+      message.textContent = "You're in. Woo :-)";
+      form.reset();
+      button.disabled = false;
+    } else {
+      message.textContent = "Idk wtf happened. Pls try again :-)";
+      button.disabled = false;
+    }
+
+  } catch (error) {
+    message.textContent = "Idk wtf happened. Pls try again :-)";
+    button.disabled = false;
+  }
+});
+
+/* form.addEventListener('submit', function(event) {
+
+  const email = input.value.trim();
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email)) {
+
+    event.preventDefault();
+
+    message.textContent = 'That\'s an invalid email address, sweetheart.';
+
+  } else {
+
+    message.textContent = '';
+
+  }
+
+}); */
+
 </script>
 
 </body>
