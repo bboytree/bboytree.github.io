@@ -171,9 +171,6 @@ footer {
 
   padding: 7px 10px;
   margin-top: 0;
-
-  font-style: italic;
-  color: #444;
 }
 
 /* Keeps the hover fade on captions separate from the image fade-in. */
@@ -404,7 +401,7 @@ td {
   width: 55%;
   max-width: 520px;
 
-  padding: 8px 12px;
+  padding: 7px 12px;
 
   font-family: 'Lora', serif;
   font-size: 16px;
@@ -433,7 +430,7 @@ td {
 }
 
 .mailing-button {
-  padding: 8px 24px;
+  padding: 7px 24px;
 
   font-family: 'Lora', serif;
   font-size: 0.87rem;
