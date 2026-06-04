@@ -36,7 +36,7 @@ body {
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   font-size: 1rem;
-  text-decoration-color: rgba(68, 68, 68, 0.75);
+  text-decoration-color: rgba(34, 34, 34, 0.75);
 }
 
 /* Top navigation bar shared by the about, gallery, and photo detail pages. */
@@ -124,7 +124,7 @@ footer {
   border-top: 1px solid currentColor;
   margin-top: 29px;
   margin-bottom: 21px;
-  color: rgba(68, 68, 68, 0.75);
+  color: rgba(34, 34, 34, 0.75);
 }
 
 /* Each gallery item is a figure containing an image and caption strip. */
@@ -206,7 +206,7 @@ footer {
   margin-top: 21px;
   border-top: var(--pagination-line-thickness) solid currentColor;
   border-bottom: var(--pagination-line-thickness) solid currentColor;
-  color: rgba(68, 68, 68, 0.75);
+  color: rgba(34, 34, 34, 0.75);
   font-size: 0.76rem;
   line-height: 1;
   font-weight: 500;
@@ -246,7 +246,7 @@ footer {
 }
 
 .photo-pagination a:hover {
-  color: rgba(68, 68, 68, 0.6);
+  color: rgba(34, 34, 34, 0.6);
   opacity: 1;
 }
 
@@ -358,7 +358,7 @@ td {
 
 .notes-line {
   border-top: 1px solid currentColor;
-  color: rgba(68, 68, 68, 0.62);
+  color: rgba(34, 34, 34, 0.62);
 }
 
 .notes-line-top {
@@ -374,6 +374,14 @@ td {
    Mailing list
    ========================= */
 
+.mobile-break {
+  display: none;
+}
+
+.desktop-space {
+  display: inline;
+}
+
 .mailing-list-section {
   margin-top: 55px;
   text-align: left;
@@ -381,7 +389,7 @@ td {
 
 .mailing-list-section .photosintro {
   font-size: 0.965rem;
-  color: rgba(68, 68, 68, 0.9);
+  color: rgba(34, 34, 34, 0.9);  
 }
 
 .mailing-form {
@@ -397,7 +405,6 @@ td {
   width: 55%;
   max-width: 520px;
 
-
   padding: 8px 12px;
 
   font-family: 'Lora', serif;
@@ -406,7 +413,7 @@ td {
   color: #222;
   background-color: transparent;
 
-  border: 1px solid rgba(68, 68, 68, 0.5);
+  border: 1px solid rgba(34, 34, 34, 0.5);
   border-radius: 0;
 
   outline: none;
@@ -415,15 +422,15 @@ td {
 }
 
 .mailing-input::placeholder {
-  color: rgba(68, 68, 68, 0.9);
+  color: rgba(34, 34, 34, 0.9);
   letter-spacing: 0.02em;
 }
 
 .mailing-input:focus {
-  border-color: rgba(68, 68, 68, 0.8);
+  border-color: rgba(34, 34, 34, 0.8);
   outline: none;
   box-shadow: none;
-  color: rgba(68, 68, 68, 0.95);
+  color: rgba(34, 34, 34, 0.95);
 }
 
 .mailing-button {
@@ -435,10 +442,10 @@ td {
   font-weight: 500;
   letter-spacing: 0.12em;
 
-  color: rgba(68, 68, 68, 0.9);
+  color: rgba(34, 34, 34, 0.9);
   background-color: #f7f1e6;
 
-  border: 1px solid rgba(68, 68, 68, 0.5);
+  border: 1px solid rgba(34, 34, 34, 0.5);
 
   cursor: pointer;
 
@@ -455,7 +462,7 @@ td {
   margin-top: 14px;
 
   font-size: 0.965rem;;
-  color: rgba(68, 68, 68, 0.9);
+  color: rgba(34, 34, 34, 0.9);
 
   min-height: 20px;
 
@@ -511,6 +518,10 @@ td {
 
   .form-message {
   text-align: center;
+  }
+
+  .mobile-break {
+  display: inline;
   }
 }
 
