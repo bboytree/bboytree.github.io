@@ -120,6 +120,10 @@ footer {
   max-width: 100%;
 }
 
+.gallery--1-row + .photo-pagination {
+  margin-top: 45px; /* increase gap only for this case */
+}
+
 .gallery-top-lines {
   border-top: 1px solid currentColor;
   margin-top: 29px;
