@@ -116,7 +116,7 @@ footer {
   column-gap: 20px;
   row-gap: var(--gallery-row-gap);
 
-  margin-top: 20px;
+  margin-top: 24px;
   max-width: 100%;
 }
 
@@ -199,7 +199,7 @@ footer {
 .photo-pagination {
   --pagination-line-thickness: 1px;
 
-  margin-top: 21px;
+  margin-top: 25px;
   border-top: var(--pagination-line-thickness) solid currentColor;
   border-bottom: var(--pagination-line-thickness) solid currentColor;
   color: rgba(34, 34, 34, 0.75);
@@ -473,7 +473,7 @@ td {
 /* Phone layout: keep two columns, but tighten the gallery spacing. */
 @media (max-width: 600px) {
   .container {
-    --gallery-row-gap: 19px;
+    --gallery-row-gap: 21px;
   }
 
   .gallery {
