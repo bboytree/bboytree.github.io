@@ -120,9 +120,9 @@ footer {
   max-width: 100%;
 }
 
-.gallery--1-row + .photo-pagination {
+/* .gallery--1-row + .photo-pagination {
   margin-top: 45px;
-}
+} */
 
 .gallery-top-lines {
   border-top: 1px solid currentColor;
@@ -203,7 +203,7 @@ footer {
 .photo-pagination {
   --pagination-line-thickness: 1px;
 
-  margin-top: 26px;
+  margin-top: 30px;
   border-top: var(--pagination-line-thickness) solid currentColor;
   border-bottom: var(--pagination-line-thickness) solid currentColor;
   color: rgba(34, 34, 34, 0.75);
