@@ -70,7 +70,7 @@ body {
 /* Introductory text blocks on the about and photos pages. */
 .intro p {
   margin-bottom: 12px;
-  font-size: 0.965rem;
+  font-size: 0.97rem;
 }
 
 /* Wrapper for large standalone images on the about and detail pages. */
@@ -104,7 +104,7 @@ footer {
 
 /* Short intro sentence above the gallery grid. */
 .photosintro {
-  font-size: 0.965rem;
+  font-size: 0.97rem;
 }
 
 /* Two-column photo grid. The row gap comes from --gallery-row-gap on .container. */
@@ -116,12 +116,12 @@ footer {
   column-gap: 20px;
   row-gap: var(--gallery-row-gap);
 
-  margin-top: 24px;
+  margin-top: 25px;
   max-width: 100%;
 }
 
 .gallery--1-row + .photo-pagination {
-  margin-top: 45px; /* increase gap only for this case */
+  margin-top: 45px;
 }
 
 .gallery-top-lines {
@@ -163,7 +163,7 @@ footer {
   text-align: left;
   font-style: italic;
   margin-top: 8px;
-  font-size: 0.96rem;
+  font-size: 0.963rem;
   color: #444;
   padding-left: 8px;
 
@@ -203,7 +203,7 @@ footer {
 .photo-pagination {
   --pagination-line-thickness: 1px;
 
-  margin-top: 25px;
+  margin-top: 26px;
   border-top: var(--pagination-line-thickness) solid currentColor;
   border-bottom: var(--pagination-line-thickness) solid currentColor;
   color: rgba(34, 34, 34, 0.75);
@@ -264,7 +264,7 @@ footer {
 .notes {
   text-align: left;
   position: relative;
-  font-size: 0.965rem;
+  font-size: 0.97rem;
   top: 12px;
 }
 
@@ -278,7 +278,7 @@ footer {
   margin-top: 0;
   padding: 8px 7px;
 
-  font-size: 0.96rem;
+  font-size: 0.963rem;
   background-color: #f7f1e6;
 }
 
@@ -388,7 +388,7 @@ td {
 }
 
 .mailing-list-section .photosintro {
-  font-size: 0.965rem;
+  font-size: 0.97rem;
   color: rgba(34, 34, 34, 0.9);  
 }
 
@@ -462,7 +462,7 @@ td {
 .form-message {
   margin-top: 14px;
 
-  font-size: 0.965rem;;
+  font-size: 0.97rem;;
   color: rgba(34, 34, 34, 0.9);
 
   min-height: 20px;
