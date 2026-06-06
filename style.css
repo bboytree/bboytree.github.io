@@ -203,7 +203,7 @@ footer {
 .photo-pagination {
   --pagination-line-thickness: 1px;
 
-  --pagination-text: rgba(34, 34, 34, 0.8);
+  --pagination-text: rgba(34, 34, 34, 0.81);
   --pagination-line: rgba(34, 34, 34, 0.70);
 
   margin-top: 30px;
