@@ -203,10 +203,13 @@ footer {
 .photo-pagination {
   --pagination-line-thickness: 1px;
 
+  --pagination-text: rgba(34, 34, 34, 0.8);
+  --pagination-line: rgba(34, 34, 34, 0.70);
+
   margin-top: 30px;
-  border-top: var(--pagination-line-thickness) solid currentColor;
-  border-bottom: var(--pagination-line-thickness) solid currentColor;
-  color: rgba(34, 34, 34, 0.75);
+  border-top: var(--pagination-line-thickness) solid var(--pagination-line);
+  border-bottom: var(--pagination-line-thickness) solid var(--pagination-line);
+  color: var(--pagination-text);
   font-size: 0.76rem;
   line-height: 1;
   font-weight: 500;
