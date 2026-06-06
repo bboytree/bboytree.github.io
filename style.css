@@ -236,7 +236,7 @@ footer {
 /* Left-side pagination link. */
 .photo-pagination__previous {
   justify-self: start;
-  padding-left: 2px;
+  padding-left: 3px;
 }
 
 /* Right-side pagination link. */
