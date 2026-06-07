@@ -429,7 +429,7 @@ td {
 }
 
 .mailing-input:focus {
-  border-color: rgba(34, 34, 34, 0.8);
+  border-color: rgba(34, 34, 34, 0.7);
   outline: none;
   box-shadow: none;
   color: rgba(34, 34, 34, 0.95);
@@ -458,7 +458,7 @@ td {
 
 .mailing-button:hover {
   background-color: rgba(255, 255, 255, 0.45);
-  border-color: rgba(34, 34, 34, 0.8);
+  border-color: rgba(34, 34, 34, 0.7);
 }
 
 .form-message {
