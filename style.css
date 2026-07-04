@@ -372,6 +372,24 @@ td {
   margin-top: 21px;
 }
 
+video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feature-video {
+  width: 75%;
+  margin: 30px 0 0;
+}
+
+/* .feature-video {
+  width: 75%;
+  max-width: 75%;
+  height: auto;
+  display: block;
+} */
 
 /* =========================
    Mailing list
