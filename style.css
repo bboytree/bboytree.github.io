@@ -380,7 +380,7 @@ video {
 }
 
 .feature-video {
-  width: 75%;
+  width: 45%;
   margin: 30px auto 0;
 }
 
@@ -573,5 +573,11 @@ video {
 @media (max-width: 600px) {
   .desktop-break {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-video {
+    width: 75%;
   }
 }
