@@ -311,6 +311,11 @@ footer {
   font-size: 0.96em;
 }
 
+.spaced-digits {
+  letter-spacing: 0.04em;
+  margin-right: -0.04em; /* cancels the extra gap after the last digit so the comma doesn't drift away */
+}
+
 /* Highlights the day number when a detail page includes one. */
 .day {
   color: #e17be8;
