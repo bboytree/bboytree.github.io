@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bala Nature Scrapbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Photos - Bala Nature Scrapbook">
+  <meta property="og:description" content="All photos were shot on a Nikon D60 camera from 2008.">
+  <meta property="og:image" content="https://balanaturescrapbook.com/favicon/apple-touch-icon.png">
+  <meta property="og:url" content="https://www.balanaturescrapbook.com">
+  <meta property="og:type" content="website">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">About</a>
+    <a href="photos.html"><strong>Photos</strong></a>
+  </nav>
+
+  <div class="container">
+
+    <h1 class="page-title">Photos</h1>
+
+    <div class="intro">
+      <p class="photosintro">
+         All photos were shot on a Nikon D60 camera from 2008.
+      </p>
+    </div>
+
+    <div class="gallery-top-lines"></div>
+
+    <div class="gallery">
+
+{{GALLERY}}
+    </div> <!-- .gallery -->
+
+{{PAGINATION}}
+
+<div class="intro mailing-list-section">
+
+  <p class="photosintro">
+    For occasional updates,<span class="mobile-break"><br></span><span class="desktop-space"> </span>enter email address:
+  </p>
+
+  <form
+    class="mailing-form"
+    action="https://formspree.io/f/xlgajdqb"
+    method="POST"
+    novalidate
+  >
+
+    <div class="mailing-form-row">
+
+      <input
+        type="email"
+        name="email"
+        placeholder="..."
+        class="mailing-input"
+        required
+      >
+
+      <button type="submit" class="mailing-button">
+        Join
+      </button>
+
+    </div>
+
+    <p class="form-message"></p>
+
+  </form>
+
+</div>
+
+  </div><!-- .container -->
+
+
+  <script>
+  document.querySelectorAll('.gallery img').forEach(img => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.onload = () => img.classList.add('loaded');
+    }
+  });
+</script>
+
+<script>
+
+const form = document.querySelector('.mailing-form');
+const input = document.querySelector('.mailing-input');
+const message = document.querySelector('.form-message');
+const button = document.querySelector('.mailing-button');
+
+form.addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const email = input.value.trim();
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // 1. Validate
+  if (!emailPattern.test(email)) {
+    message.textContent = "That\'s an invalid email address, sweetheart.";
+    return;
+  }
+
+  // 2. Loading state
+  message.textContent = "Joining...";
+  button.disabled = true;
+
+  try {
+    // 3. Send to Formspree (background request)
+    const response = await fetch(form.action, {
+      method: "POST",
+      headers: {
+        "Accept": "application/json"
+      },
+      body: new FormData(form)
+    });
+
+    if (response.ok) {
+      message.textContent = "You're in. Woo :-)";
+      form.reset();
+      button.disabled = false;
+    } else {
+      message.textContent = "Idk wtf happened. Pls try again :-)";
+      button.disabled = false;
+    }
+
+  } catch (error) {
+    message.textContent = "Idk wtf happened. Pls try again :-)";
+    button.disabled = false;
+  }
+});
+
+</script>
+
+</body>
+</html>
