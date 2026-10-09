@@ -1,8 +1,8 @@
 {
   "per_page": 6,
-  "seen": ["eternal.JPG", "folly_folly.JPG", "goodnight.JPG", "lines_and_shapes.jpg", "post_lunch.JPG", "rising_sun.JPG", "rising_sun_3.JPG", "soft_strokes.JPG", "soul_piercing.JPG", "test.JPG", "test2.JPG", "tigerfly.JPG", "woodland_standoff.JPG"],
+  "seen": ["eternal.JPG", "folly_folly.JPG", "folly_folly.jpg", "folly_folly_2.jpg", "goodnight.JPG", "lines_and_shapes.jpg", "post_lunch.JPG", "rising_sun.JPG", "rising_sun_3.JPG", "soft_strokes.JPG", "soul_piercing.JPG", "test.JPG", "test2.JPG", "tigerfly.JPG", "woodland_standoff.JPG"],
   "photos": [
-    {"page": "photos/folly_folly.html", "img": "photos/folly_folly.jpg", "alt": "Folly Folly photo", "caption": "Folly Folly"},
+    {"page": "photos/folly_folly.html", "img": "photos/thumbnails/folly_folly.jpg", "alt": "Folly Folly photo", "caption": "Folly Folly"},
     {"page": "photos/heatwave-hardworking.html", "img": "photos/thumbnails/heatwave-hardworking.svg", "alt": "Heatwave-Hardworking photo", "caption": "Heatwave"},
     {"page": "photos/woodland_standoff.html", "img": "photos/thumbnails/woodland_standoff.jpg", "alt": "Woodland Standoff photo", "caption": "Woodland Standoff"},
     {"page": "photos/tigerfly.html", "img": "photos/thumbnails/tigerfly.jpg", "alt": "Tigerfly photo", "caption": "Tigerfly"},
