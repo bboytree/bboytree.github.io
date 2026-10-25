@@ -500,6 +500,35 @@ video {
   text-align: left;
 }
 
+
+.zoom-control {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+#zoom-toggle {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#zoom-toggle:hover {
+  opacity: 0.65;
+}
+
+#zoom-toggle:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
 /* =========================
    Responsive
    ========================= */

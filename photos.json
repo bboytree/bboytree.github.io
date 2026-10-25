@@ -1,7 +1,8 @@
 {
   "per_page": 6,
-  "seen": ["eternal.JPG", "folly_folly.JPG", "folly_folly.jpg", "folly_folly_2.jpg", "goodnight.JPG", "lines_and_shapes.jpg", "post_lunch.JPG", "rising_sun.JPG", "rising_sun_3.JPG", "soft_strokes.JPG", "soul_piercing.JPG", "test.JPG", "test2.JPG", "tigerfly.JPG", "woodland_standoff.JPG"],
+  "seen": ["DSC_0183.JPG", "DSC_0183_2.jpg", "DSC_0183_3.jpg", "DSC_0183_4.jpg", "DSC_0183_5.jpg", "DSC_0183_6.jpg", "DSC_0183_7.jpg", "DSC_0183_8.jpg", "eternal.JPG", "folly_folly.JPG", "folly_folly.jpg", "folly_folly_2.jpg", "goodnight.JPG", "lines_and_shapes.jpg", "post_lunch.JPG", "rising_sun.JPG", "rising_sun_3.JPG", "soft_strokes.JPG", "soul_piercing.JPG", "test.JPG", "test2.JPG", "tigerfly.JPG", "woodland_standoff.JPG"],
   "photos": [
+    {"page": "photos/dsc_0183_7.html", "img": "photos/DSC_0183_7.jpg", "alt": "Step by Step photo", "caption": "Step by Step"},
     {"page": "photos/folly_folly.html", "img": "photos/thumbnails/folly_folly.jpg", "alt": "Folly Folly photo", "caption": "Folly Folly"},
     {"page": "photos/heatwave-hardworking.html", "img": "photos/thumbnails/heatwave-hardworking.svg", "alt": "Heatwave-Hardworking photo", "caption": "Heatwave"},
     {"page": "photos/woodland_standoff.html", "img": "photos/thumbnails/woodland_standoff.jpg", "alt": "Woodland Standoff photo", "caption": "Woodland Standoff"},
@@ -10,7 +11,7 @@
     {"page": "photos/soft_strokes.html", "img": "photos/thumbnails/soft_strokes.jpg", "alt": "Soft Strokes photo", "caption": "Soft Strokes"},
     {"page": "photos/post_lunch.html", "img": "photos/thumbnails/post_lunch.jpg", "alt": "Post-Lunch photo", "caption": "Post-Lunch"},
     {"page": "photos/eternal.html", "img": "photos/eternal.JPG", "alt": "Eternal photo", "caption": "Eternal"},
-    {"page": "photos/rising_sun.html", "img": "photos/thumbnails/rising_sun.jpg", "alt": "Rising Sun photo", "caption": "Rising Sun"},
+    {"page": "photos/rising_sun.html", "img": "photos/thumbnails/rising_sun.jpg", "alt": "Rising Sun photo", "caption": "Circle of the Sun"},
     {"page": "photos/lines_and_shapes.html", "img": "photos/thumbnails/lines_and_shapes.jpg", "alt": "Lines and Shapes photo", "caption": "Lines and Shapes"},
     {"page": "photos/goodnight.html", "img": "photos/thumbnails/goodnight.jpg", "alt": "Goodnight photo", "caption": "Goodnight"}
   ]

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bala Nature Scrapbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Dsc 0183 6 - Bala Nature Scrapbook">
+  <meta property="og:description" content="Dsc 0183 6">
+  <meta property="og:image" content="https://balanaturescrapbook.com/favicon/apple-touch-icon.png">
+  <meta property="og:url" content="https://www.balanaturescrapbook.com">
+  <meta property="og:type" content="website">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+
+  <link rel="icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="/index.html">About</a>
+    <a href="/photos.html">Photos</a>
+  </nav>
+
+  <div class="container">
+
+    <h1 class="page-title">Step by Step</h1>
+
+<div class="feature-image">
+  <figure>
+    <img src="DSC_0183_8.jpg" alt="Dsc 0183 6 photo">
+
+    <div class="image-meta">
+      <span class="location">Location</span>
+      <span class="date">
+        Month <span class="year">YYYY</span>
+      </span>
+    </div>
+  </figure>
+</div>
+
+
+<div class="zoom-control">
+  <button
+    type="button"
+    id="zoom-toggle"
+    aria-pressed="false"
+  >Zoom In</button>
+</div>
+
+
+    <div class="photo-details">
+
+      <div class="notes">
+        <p><strong>Notes:</strong></p>
+        <p class="note-item">* Note</p>
+
+      </div> <!-- .notes -->
+    </div> <!-- .photo-details -->
+
+  </div> <!-- .container -->
+
+ <script>
+const photo = document.querySelector('.feature-image img');
+const zoomToggle = document.getElementById('zoom-toggle');
+
+const originalSrc = photo.getAttribute('src');
+const zoomSrc = 'DSC_0183_7.JPG';
+
+let isZoomed = false;
+
+zoomToggle.addEventListener('click', () => {
+  isZoomed = !isZoomed;
+
+  photo.src = isZoomed ? zoomSrc : originalSrc;
+  zoomToggle.textContent = isZoomed ? 'Zoom Out' : 'Zoom In';
+  zoomToggle.setAttribute('aria-pressed', String(isZoomed));
+});
+</script>
+
+</body>
+</html>
