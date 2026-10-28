@@ -5,7 +5,7 @@
   <title>Bala Nature Scrapbook</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:title" content="Dsc 0183 6 - Bala Nature Scrapbook">
+  <meta property="og:title" content="Step by Step - Bala Nature Scrapbook">
   <meta property="og:description" content="Dsc 0183 6">
   <meta property="og:image" content="https://balanaturescrapbook.com/favicon/apple-touch-icon.png">
   <meta property="og:url" content="https://www.balanaturescrapbook.com">
@@ -31,55 +31,28 @@
 
 <div class="feature-image">
   <figure>
-    <img src="DSC_0183_8.jpg" alt="Dsc 0183 6 photo">
+    <img src="step_by_step.jpg" alt="Step by Step photo">
 
     <div class="image-meta">
-      <span class="location">Location</span>
+      <span class="location">Beatrixpark</span>
       <span class="date">
-        Month <span class="year">YYYY</span>
+        July <span class="year">2026</span>
       </span>
     </div>
   </figure>
 </div>
 
-
-<div class="zoom-control">
-  <button
-    type="button"
-    id="zoom-toggle"
-    aria-pressed="false"
-  >Zoom In</button>
-</div>
-
-
     <div class="photo-details">
 
       <div class="notes">
         <p><strong>Notes:</strong></p>
-        <p class="note-item">* Note</p>
+        <p class="note-item">* distinguished by its iconic yellow-tipped red bill, moorhens are well adapted water birds</p>
+        <p class="note-item">* pecking at water lilies' seeds and small insects, they take advantage of their comically large feet to get a lay of the land</p>
 
       </div> <!-- .notes -->
     </div> <!-- .photo-details -->
 
   </div> <!-- .container -->
-
- <script>
-const photo = document.querySelector('.feature-image img');
-const zoomToggle = document.getElementById('zoom-toggle');
-
-const originalSrc = photo.getAttribute('src');
-const zoomSrc = 'DSC_0183_7.jpg';
-
-let isZoomed = false;
-
-zoomToggle.addEventListener('click', () => {
-  isZoomed = !isZoomed;
-
-  photo.src = isZoomed ? zoomSrc : originalSrc;
-  zoomToggle.textContent = isZoomed ? 'Zoom Out' : 'Zoom In';
-  zoomToggle.setAttribute('aria-pressed', String(isZoomed));
-});
-</script>
 
 </body>
 </html>
